@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "223873912497",
+    "firebase_url": "https://collegenoticeboard-2cce0.firebaseio.com",
+    "project_id": "collegenoticeboard-2cce0",
+    "storage_bucket": "collegenoticeboard-2cce0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223873912497:android:bcf99e895934fa8c",
+        "android_client_info": {
+          "package_name": "com.example.collegenoticeboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223873912497-oop0m9kujuo0re8caacgk8d4gfsqv1i5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.collegenoticeboard",
+            "certificate_hash": "462355ee4ccea2ede4a7cf2f58298d85895bb25d"
+          }
+        },
+        {
+          "client_id": "223873912497-uplrg7l2vusten42rjtgm23ipr2uohmf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkA0AV4pYVkKYv5ADr8vNszTW4YiYtpNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223873912497-uplrg7l2vusten42rjtgm23ipr2uohmf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
