@@ -33,7 +33,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                     mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_Profile:
-                    mTextMessage.setText(R.string.title_dashboard);
+                    mTextMessage.setText(R.string.title_profile);
                     return true;
 
             }
