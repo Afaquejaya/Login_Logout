@@ -27,7 +27,7 @@
         app:menu="@menu/bottom_nav_menu" />
 
 
-    <LinearLayout
+    <!--  <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -52,6 +52,6 @@
             android:layout_gravity="center_horizontal"
             android:text="Logout" />
 
-    </LinearLayout>
+    </LinearLayout>    -->
 
 </RelativeLayout>

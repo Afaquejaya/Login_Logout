@@ -23,7 +23,8 @@ import android.support.v7.widget.Toolbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
+//public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
+    public class ProfileActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private TextView textViewUserEmail;
@@ -35,6 +36,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     //  private DrawerLayout drawerLayout;
     //  ImageView nav_header_imageView;
     Toolbar toolbar;
+    BottomNavigationView bottomNavigationView;
+    Fragment selectedFragment = null;
 
 
     @Override
@@ -42,7 +45,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        firebaseAuth = FirebaseAuth.getInstance();
+       /* firebaseAuth = FirebaseAuth.getInstance();
         if (firebaseAuth.getCurrentUser() == null) {
             finish();
             startActivity(new Intent(this, loginActivity.class));
@@ -55,9 +58,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         buttonLogout = (Button) findViewById(R.id.buttonLogout);
 
         buttonLogout.setOnClickListener(this);
-
     }
-
 
     @Override
     public void onClick(View view) {
@@ -67,8 +68,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             finish();
             startActivity(new Intent(this,loginActivity.class));
         }
+            */
 
-       // setContentView(R.layout.fragment_profile);    //added optionally
+        // setContentView(R.layout.fragment_profile);    //added optionally
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_nav_menu);
 
@@ -82,31 +84,34 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                    Fragment selectedFragment = null;
+                    // Fragment selectedFragment = null;
 
                     switch (menuItem.getItemId()) {
 
 
                         case R.id.navigation_home:
                             selectedFragment = new HomeFragment();
-                              toolbar.setTitle("Home");
+                          //  toolbar.setTitle("Home");
                             break;
                         case R.id.navigation_Profile:
                             selectedFragment = new ProfileFragment();
-                              toolbar.setTitle("Profile");
+                          //  toolbar.setTitle("Profile");
                             break;
 
 
                     }
 
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
+                    if (selectedFragment != null) {
+
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                selectedFragment).commit();
+                    }
                     return true;
 
 
                 }
             };
 
-        }
+}
 
 
